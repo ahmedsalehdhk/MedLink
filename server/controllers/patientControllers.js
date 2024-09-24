@@ -25,9 +25,9 @@ const getPatient = async (req, res) => {
 
 // create a new patient
 const createPatient = async (req, res) => {
-    const { fullName, age, gender, contact, address, cancerType, diagnosisDate, lastMedication, dateOfLastMedication, status } = req.body;
+    const { name, age, gender, contact, address, cancerType, diagnosisDate, latestMedication, dateOfLatestMedication, status } = req.body;
     try {
-        const patient = await Patient.create({fullName, age, gender, contact, address, cancerType, diagnosisDate, lastMedication, dateOfLastMedication, status});
+        const patient = await Patient.create({name, age, gender, contact, address, cancerType, diagnosisDate, latestMedication, dateOfLatestMedication, status});
         res.status(200).json(patient);
     } catch (error) {
         res.status(400).json({error: error.message})

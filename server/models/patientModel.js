@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 // change this to change type of product (maybe dynamically?)
 const patientSchema =  new Schema({
-    fullName: {
+    name: {
         type: String,
         required: true
     },
@@ -33,11 +33,11 @@ const patientSchema =  new Schema({
         type: Date,
         required: true
     },
-    lastMedication: {
+    latestMedication: {
         type: String,
         required: true
     },
-    dateOfLastMedication: {
+    dateOfLatestMedication: {
         type: Date,
         required: true
     },
